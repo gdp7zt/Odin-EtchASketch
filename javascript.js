@@ -35,8 +35,9 @@ function createSquares(){
     }
     const boxes = document.getElementsByClassName("down");
     for (let i = 0; i < boxes.length; i++){
-    boxes[i].addEventListener("mouseover", () => {
-        boxes[i].classList.add('hover');
-    });
-}
+        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        boxes[i].addEventListener("mouseover", () => {
+            boxes[i].style.backgroundColor = "#" + randomColor;
+        });
+    }
 }
